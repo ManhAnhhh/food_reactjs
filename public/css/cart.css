@@ -1,0 +1,118 @@
+.cart {
+  width: 99%;
+  font-size: 1.7rem;
+}
+.cart p {
+  font-size: 2rem;
+  margin-top: 16px;
+}
+#items .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+}
+#items .item .img-item {
+  width: 10%;
+  border-radius: 16px;
+}
+#items .item .img-item img {
+  width: 100%;
+  border-radius: inherit;
+}
+#items .item .name-item {
+  padding-left: 8px;
+  width: 250px;
+  color: #ee4d2d;
+}
+.item .quantity #quantity {
+  padding: 4px;
+  font-size: 1.7rem;
+  border: none;
+  text-align: center;
+  width: 50px;
+}
+/* .item .quantity .increase,
+.item .quantity .decrease {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 4px 12px;
+  font-size: inherit;
+} */
+/* .item .quantity .increase:hover,
+.item .quantity .decrease:hover {
+  background-color: #d65108;
+  color: #fff;
+} */
+/* .item .quantity #text {
+  text-align: center;
+  font-size: inherit;
+  border: none;
+  width: 36px;
+  padding: 8px;
+  outline: none;
+} */
+.item .cost {
+  color: #ee4d2d;
+  font-weight: bold;
+}
+.item .remove {
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
+  padding: 8px;
+}
+.item .remove i {
+  color: #666;
+}
+.item .remove i:hover {
+  color: #000;
+}
+#items .total {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 2.5rem;
+}
+#items .total-money {
+  padding: 8px 32px;
+  font-size: inherit;
+  color: #ee4d2d;
+  font-weight: bold;
+}
+.cart .infor {
+  margin: 8px 0 8px 32px;
+}
+.infor input {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 8px;
+  font-size: inherit;
+  outline: none;
+}
+.infor input[type="text"] {
+  width: 100%;
+}
+.infor .infor-item {
+  display: grid;
+  grid-template-columns: 49% 49%;
+  gap: 2%;
+}
+.infor button {
+  margin: 16px 0;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 4px 12px;
+  font-size: inherit;
+  background-color: orangered;
+  color: #fff;
+  float: right;
+}
+.infor button:hover {
+  opacity: 0.8;
+}

@@ -1,0 +1,91 @@
+.product-detail p{
+  font-size: 2rem;
+  margin-top: 4px;
+}
+.product-detail .product-img {
+  width: 30%;
+  float: left;
+}
+.product-detail img {
+  width: 100%;
+}
+.product-detail .product-img img {
+  border-radius: 8px;
+}
+.product-detail .product-infor {
+  color: orangered;
+  text-align: center;
+  overflow: hidden;
+}
+.product-infor .product-img-small {
+  width: 100px;
+  margin: 16px auto;
+}
+.product-infor .product-img-small img {
+  border-radius: 50%;
+}
+.product-infor .watch-video a {
+  color: inherit;
+  font-size: 2rem;
+  text-decoration: underline;
+}
+.product-infor .watch-video a:hover {
+  opacity: 0.6;
+}
+.product-infor .product-name,
+.product-infor .product-price {
+  font-weight: bold;
+}
+.product-infor .product-price {
+  color: #d65108;
+}
+.product-infor .product-category {
+  display: inline-block;
+  background-color: orangered;
+  color: #fff;
+  padding: 3.2px 8px;
+  border-radius: 5px;
+}
+.product-infor .btn-container {
+  margin: 16px 0;
+}
+.product-infor .btn-container .recipe-btn {
+  text-decoration: none;
+  color: #fff;
+  background: #d65108;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0.75rem 0;
+  display: inline-block;
+  width: 150px;
+  margin: 1rem 4px;
+  border: none;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  transition: all 0.4s linear;
+  -webkit-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+  -ms-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+}
+.product-infor .btn-container .recipe-btn:hover {
+  background: #b54507;
+  cursor: pointer;
+}
+.product-instruction {
+  font-size: 1.5rem;
+  color: #4e4e4e;
+}
+.product-instruction .title {
+  font-size: 2rem;
+  color: orangered;
+  font-weight: bold;
+}
+.product-instruction .description{
+  width: 99%;
+  text-align: justify;
+  margin: 8px 0;
+}

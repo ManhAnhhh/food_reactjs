@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log in</title>
+    <link
+      rel="icon"
+      href="./Images/download.png"
+      type="image/icon type"
+    />
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <script
+      src="https://kit.fontawesome.com/203ae9be09.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!--Header section start-->
+    <!-- login -->
+    <div class="modal modal-login">
+      <div class="modal-login-container">
+        <div>
+          <span class="close-modal"
+            ><i class="fa-solid fa-xmark fa-2xs"></i
+          ></span>
+        </div>
+        <h2 class="title">Log in</h2>
+        <div class="item"><input type="email" placeholder="Email" id="login-email" /></div>
+        <div class="item"><input type="password" placeholder="Password" id="login-password" /></div>
+        <input type="button" value="Log in" id="login-btn" />
+      </div>
+    </div>
+    <!-- sign-up -->
+    <div class="modal modal-sign-up">
+      <div class="modal-sign-up-container">
+        <div>
+          <span class="close-modal2"
+            ><i class="fa-solid fa-xmark fa-2xs"></i
+          ></span>
+        </div>
+        <h2 class="title">Sign up</h2>
+        <div class="item">
+          <input type="text" placeholder="Full name" id="sign-up-name" />
+        </div>
+        <div class="item">
+          <input type="email" placeholder="Email" id="sign-up-email" />
+        </div>
+        <div class="item">
+          <input type="password" placeholder="Password" id="sign-up-password" />
+        </div>
+        <input type="button" value="Create an account" id="sign-up-btn" />
+      </div>
+    </div>
+    <!-- header -->
+    <header>
+      <a href="#" class="logo"><i class="fa fa-utensils"></i>Foodies.</a>
+      <div class="meal-search-box">
+        <input
+          type="text"
+          class="search-control"
+          placeholder="Enter an ingredient"
+          id="search-input"
+        />
+        <button type="submit" class="search-btn btn" id="search-btn">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+
+      <div id="form">
+        <input id="login" type="button" value="Log in" />
+        <input id="sign-up" type="button" value="Sign up" />
+      </div>
+
+    </header>
+    <nav class="navbar">
+      <a class="active" href="./home.html">Home</a>
+      <a href="#categories">Dishes</a>
+      <a href="#">About</a>
+      <a href="./contact.html">Contact Us</a>
+      <a class="feed" id="feedback">Feedback</a>
+      <a href="#">Orders</a>
+    </nav>  
+    <div class="back">
+      <div class="container1" id="co1">
+        <div class="post">
+          <div class="text">Thanks for Rating us!</div>
+          <div class="edit">Edit</div>
+          <i class="fas fa-times" id="close"></i>
+        </div>
+        <div class="star-widget">
+          <input type="radio" name="rate" id="rate-5" />
+          <label for="rate-5" class="fas fa-star"></label>
+          <input type="radio" name="rate" id="rate-4" />
+          <label for="rate-4" class="fas fa-star"></label>
+          <input type="radio" name="rate" id="rate-3" />
+          <label for="rate-3" class="fas fa-star"></label>
+          <input type="radio" name="rate" id="rate-2" />
+          <label for="rate-2" class="fas fa-star"></label>
+          <input type="radio" name="rate" id="rate-1" />
+          <label for="rate-1" class="fas fa-star"></label>
+          <form action="#">
+            <i class="fas fa-times" id="close"></i>
+            <h4></h4>
+            <div class="textarea">
+              <textarea
+                cols="30"
+                placeholder="Describe your experience"
+              ></textarea>
+            </div>
+
+            <div class="btn">
+              <button type="submit">Post</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Header section ends-->
+
+    <!--search form-->
+    <form action="" id="search-form">
+      <input
+        type="search"
+        placeholder="search here..."
+        name=""
+        id="search-box"
+      />
+      <label for="search-box" class="fas fa-search"></label>
+      <i class="fas fa-times" id="close1"></i>
+    </form>
+    <!--Search Form ends-->
+
+    <!--Home section start-->
+    <section class="home" id="home-section">
+      <!--Add-->
+      <div class="add">
+        <div class="add-container">
+          <img src="./Images/burger banner.jpg" alt="" />
+          <div class="textimg">
+            <h2>
+              30% off on your<br />
+              first order
+            </h2>
+            <a href="#categories"><button class="ordr">Order Now</button></a>
+          </div>
+        </div>
+      </div>
+      <!--Add ends-->
+
+      <!--Restaurants-->
+      <div class="res"></div>
+      <section class="barb" id="categories">
+        <div style="height: 10px"></div>
+        <h2>Categories</h2>
+        <!-- <hr class="line" /> -->
+        <div class="box-container">
+          <!-- <div class="box">
+            <a href="./barbeque.html"
+              ><img
+                src=""
+                alt=""
+            /></a>
+            <h3>Barbeque</h3>
+            <div class="stars">
+              <br />
+              <p>Starters,biryani,tandoori</p>
+            </div>
+          </div> -->
+        </div>
+      </section>
+    </section>
+    <div id="about" class="about">
+      <a href="#" class="closebtn">&times;</a>
+      <div class="about-overlay">
+        <h1>About us</h1>
+        <p>
+          Launched in 2021, Our technology platform connects customers,<br />
+          restaurant partners and delivery partners, serving their multiple
+          needs. <br />
+          Customers use our platform to search and discover restaurants, read
+          and write customer generated reviews and view and upload photos,<br />
+          order food delivery, book a table and make payments while dining-out
+          at restaurants. On the other hand,<br />
+          we provide restaurant partners with industry-specific marketing tools
+          which enable them to engage and acquire customers<br />
+          to grow their business while also providing a reliable <br />and
+          efficient last mile delivery service. We also operate a one-stop
+          procurement solution, <br />Hyperpure, which supplies high quality
+          ingredients and kitchen products to restaurant partners.<br />
+          We also provide our delivery partners with transparent and flexible
+          earning opportunities.
+        </p>
+      </div>
+    </div>
+
+    <!--Footer Section-->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <ul>
+              <i class="fa fa-utensils"></i>
+              <span>Foodies.</span>
+            </ul>
+            <div class="map">
+              <ul>
+                <i class="fa fa-map-marker"></i>
+                <span
+                  >5th Floor, A-118,Sangareddy, Hyderabad, Telangana - 502001
+                </span>
+              </ul>
+            </div>
+            <div class="mail">
+              <ul>
+                <i class="fas fa-inbox"></i>
+                <span> support@foodies.com </span>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Foodies</h4>
+            <ul>
+              <li><a href="#">about us</a></li>
+              <li><a href="#">Our services</a></li>
+              <li><a href="#">Privacy policy</a></li>
+              <li><a href="#">Payment policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Get help</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Delivery</a></li>
+              <li><a href="#">My orders</a></li>
+              <li><a href="#">Order Status</a></li>
+              <li><a href="#">Payment options</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Follow us</h4>
+            <div class="social-links">
+              <a href="https://www.facebook.com/" title="facebook"
+                ><i class="fab fa-facebook-f"></i> Facebook</a
+              >
+              <br />
+              <a href="https://twitter.com/login"
+                ><i class="fab fa-twitter"></i> Twitter</a
+              >
+              <br />
+              <a href="https://www.instagram.com/"
+                ><i class="fab fa-instagram"></i> Instagram</a
+              >
+              <br />
+              <a href="https://www.linkedin.com/login"
+                ><i class="fab fa-linkedin-in"></i> Linkedin</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--Home  ends-->
+
+    <!--Java Script-->
+    
+
+    <!--JavaScript ends -->
+  </body>
+</html>

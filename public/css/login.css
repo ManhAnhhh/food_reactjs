@@ -1,0 +1,70 @@
+.open {
+  display: flex !important;
+}
+
+.modal-login,
+.modal-sign-up {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999999;
+  background-color: rgba(0, 0, 0, 0.4);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-login .modal-login-container,
+.modal-sign-up .modal-sign-up-container {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 32px 24px 60px;
+}
+
+.close-modal,
+.close-modal2 {
+  cursor: pointer;
+  font-size: 28px;
+  float: right;
+  background-color: #ccc;
+  border-radius: 50%;
+  padding: 0px 14px;
+}
+.close-modal i,
+.close-modal2 i {
+  color: #333;
+  opacity: 0.8;
+}
+
+.modal-login-container h2,
+.modal-sign-up-container h2 {
+  margin: 32px 0;
+  font-size: 2.8rem;
+  text-align: center;
+}
+.modal .item,
+.modal input[type="button"] {
+  margin: 16px 8px;
+}
+.modal input {
+  text-transform: none !important;
+  width: 380px;
+  font-size: 1.6rem;
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #f1f1f2;
+  border: none;
+  outline: none;
+  border-radius: 99px;
+}
+.modal input[type="button"] {
+  margin-top: 32px;
+  cursor: pointer;
+  background: linear-gradient(to right bottom, #ff8f26, #ff5117);
+  color: #fff;
+}
+.modal input[type="button"]:hover {
+  background: orangered;
+}
