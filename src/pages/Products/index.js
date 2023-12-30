@@ -7,7 +7,8 @@ const Products = () => {
   const params = useParams();
   const category = params.c;
   const [products, setProducts] = useState([]);
-
+  const [currentPage, setCurrentPage] = useState(1);
+  const productsPerPage = 6;
   useEffect(() => {
     getByCategory(category, {}).then(({ data }) => {
       const meals = data.meals;
@@ -17,6 +18,18 @@ const Products = () => {
       setProducts(meals)
     });
   }, [category]);
+
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  const currentProducts = products.slice(
+    indexOfFirstProduct,
+    indexOfLastProduct
+  );
+  const totalPages = Math.ceil(products.length / productsPerPage);
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    return false;
+  };
   return (
     <>
       <section className="barb" id="categories">
@@ -25,27 +38,17 @@ const Products = () => {
         <div className="box-container">
           <div id="meal">
             {/* meal item */}
-            {
-              products.map(item => {
-                return (
-                  // <div className="meal-item">
-                  //   <div className="meal-img">
-                  //     <Link to={`/product-detail-${item.idMeal}`}><img src={item.strMealThumb} alt="food" /></Link>
-                  //   </div>
-                  //   <div className="meal-infor">
-                  //     <Link to={`/product-detail-${item.idMeal}`}><h3 className="meal-name">{item.strMeal}</h3></Link>
-                  //     <p className="meal-price">Price: <span>{item.price}$</span></p>
-                  //   </div>
-                  // </div>
-                  <ProductItem item={item}/>
-                  
-                )
-              })
-            }
+            {currentProducts.map((item) => (
+              <ProductItem key={item.idMeal} item={item} />
+            ))}
             {/* end of meal item */}
           </div>
         </div>
-        <Pagination />
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          paginate={paginate}
+        />
       </section>
 
     </>
