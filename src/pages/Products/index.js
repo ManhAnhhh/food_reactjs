@@ -1,5 +1,5 @@
 import { getByCategory } from "../../services/Api";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Pagination from "../../shared/components/Pagination";
 import ProductItem from "../../shared/components/product-item";
