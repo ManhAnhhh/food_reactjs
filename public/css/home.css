@@ -168,7 +168,7 @@ header .icons .cart {
 header .icons i,
 header .icons a {
   cursor: pointer;
-  margin: left 0.5rem;
+  margin-left: 4.5rem;
   height: 4.5rem;
   line-height: 4.5rem;
   width: 4.5rem;
@@ -186,6 +186,12 @@ header .icons a:hover {
 }
 header .icons #menu-bars {
   display: none;
+}
+header .user {
+  font-size: 16px;
+  margin-right: -24px;
+  color: orangered;
+  font-weight: 700;
 }
 #search-form {
   position: fixed;
@@ -429,6 +435,7 @@ ul {
   list-style: none;
 }
 .footer {
+  clear: both;
   overflow: hidden;
   margin-left: auto;
   background: #24262b;
@@ -812,7 +819,7 @@ section h1 {
   border-radius: 2rem;
 }
 
-.btn {
+.btn-s {
   display: inline-block;
   margin-top: 0;
   font-size: 1.4rem;
@@ -905,7 +912,7 @@ section h1 {
     display: inline-block;
   }
   header .icons .cart {
-    left: 72px!important;
+    left: 36px !important;
   }
   .navbar {
     position: absolute;
@@ -1282,3 +1289,35 @@ section h1 {
   border-radius: 50%;
 }
 
+/* style modal about */
+.modal-about {
+  margin-top: 32px;
+  padding: 16px;
+  background-color: #ff9240;
+  color: #FFFFA9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  border-radius: 8px;
+}
+.modal-about .modal-about-title {
+  text-align: center;
+  font-size: 20px;
+  margin: 8px 0;
+  font-weight: bold;
+}
+.modal-about .modal-about-content {
+  text-align: justify;
+  line-height: 2;
+}
+.modal-about .modal-about-btn {
+  background-color: orangered;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 0px 5px;
+}

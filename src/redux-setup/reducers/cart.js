@@ -1,4 +1,4 @@
-import { ADD_TO_CART, DELETE_CART, UPDATE_CART } from "../../shared/constants/action-type";
+import { ADD_TO_CART, DELETE_CART, UPDATE_CART, DELETE_CART_ALL } from "../../shared/constants/action-type";
 const initState = {
   carts: [],
 }
@@ -12,6 +12,8 @@ export default (state = initState, action) => {
         (item) => item.idMeal !== action.payload.idMeal
       );
       return { ...state, carts: newCarts }
+    case DELETE_CART_ALL:
+      return deleteAllCartItems();
     default: return state;
   }
 }
@@ -39,4 +41,9 @@ const updateCart = (state, payload) => {
     }
     return item;
   }); return { ...state, carts: newCarts };
+}
+
+const deleteAllCartItems = () => {
+  localStorage.removeItem("cart_items"); // Optionally remove from local storage
+  return { carts: [] }; // Clear the cart items
 }

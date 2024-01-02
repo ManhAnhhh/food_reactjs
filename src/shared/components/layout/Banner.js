@@ -1,4 +1,7 @@
+import { Link } from "react-router-dom";
+
 const Banner = () => {
+
   return (
     <div className="add">
       <div className="add-container">
@@ -8,7 +11,7 @@ const Banner = () => {
             30% off on your<br />
             first order
           </h2>
-          <a href="#categories"><button className="ordr">Order Now</button></a>
+          <Link to="/"><button className="ordr">Order Now</button></Link>
         </div>
       </div>
     </div>

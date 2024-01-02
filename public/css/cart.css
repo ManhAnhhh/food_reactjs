@@ -97,6 +97,9 @@
 .infor input[type="text"] {
   width: 100%;
 }
+.infor input[type="email"] {
+  text-transform: none !important;
+}
 .infor .infor-item {
   display: grid;
   grid-template-columns: 49% 49%;
@@ -115,4 +118,16 @@
 }
 .infor button:hover {
   opacity: 0.8;
+}
+.buyButton {
+  text-align: right;
+}
+.buyButton button {
+  cursor: pointer;
+  background-color: orangered;
+  padding: 15px;
+  font-size: 15px;
+  border: none;
+  color: white;
+  border-radius: 5px;
 }

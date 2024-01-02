@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { ADD_TO_CART } from "../../shared/constants/action-type";
 import { getById } from "../../services/Api";
-const ProducDetails = () => {
+import { toast } from 'react-toastify';
+const ProducDetails = ({toggleModal}) => {
   const params = useParams();
   const id = params.id;
   const [productDetail, setProductDetail] = useState([
@@ -20,21 +21,28 @@ const ProducDetails = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const addToCart = (type) => {
-    dispatch({
-      type: ADD_TO_CART,
-      payload: {
-        idMeal: id,
-        strMeal: productDetail[0].strMeal,
-        strMealThumb: productDetail[0].strMealThumb,
-        qty: 1,
-        price: Math.ceil(Math.random() * 10 + 10),
-      },
-    });
-    if (type === "buy-now") {
-      return navigate('/cart');
+    if (localStorage.getItem("userLogin")) {
+      dispatch({
+        type: ADD_TO_CART,
+        payload: {
+          idMeal: id,
+          strMeal: productDetail[0].strMeal,
+          strMealThumb: productDetail[0].strMealThumb,
+          qty: 1,
+          price: Math.ceil(Math.random() * 10 + 10),
+        },
+      });
+      toast.success("Successfully added to cart");
+      if (type === "buy-now") {
+        return navigate('/cart');
+      }
     }
-  }
+    else {
+      toggleModal()
+    }
 
+  }
+  const youtubeURL = productDetail[0].strYoutube;
   return (
     <section className="barb" id="categories">
       <h2>{productDetail[0].strCategory}</h2>
@@ -57,7 +65,7 @@ const ProducDetails = () => {
             <i className="fas fa-star-half-alt fa-lg" />
           </div>
           <div className="watch-video">
-            <Link to={productDetail[0].strYoutobe} target="_blank" rel="noreferrer">Watch video</Link>
+            <a href={productDetail[0].strYoutube} target="_blank" rel="noreferrer">Watch video</a>
           </div>
           <div className="btn-container">
             <button onClick={() => addToCart("buy-now")} className="recipe-btn">Buy now</button>
