@@ -13,6 +13,7 @@ import ModalLogin from "./shared/components/ModalLogin";
 import { ToastContainer } from "react-toastify";
 import { useState } from "react";
 import ModalAbout from "./shared/components/ModalAbout";
+import ModalByUser from "./shared/components/ModalByUser";
 const App = () => {
   const [modal, setModal] = useState(false);
   const [showIcon, setShowIcon] = useState(false);
@@ -24,7 +25,7 @@ const App = () => {
     return setShowIcon(bool);
   };
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [secondModalIsOpen, setSecondModalIsOpen] = useState(false);
+  const [modalIsOpen2, setModalIsOpen2] = useState(false);
   return (
     <Provider store={store}>
       <BrowserRouter>
@@ -35,6 +36,7 @@ const App = () => {
             showIcon={showIcon}
             setShowIconUser={setShowIconUser}
             setModalIsOpen={setModalIsOpen}
+            setModalIsOpen2={setModalIsOpen2}
           />
           {/* Header ends*/}
           {/*Home section start*/}
@@ -110,10 +112,11 @@ const App = () => {
           />
           <ModalAbout
             setModalIsOpen={setModalIsOpen}
-            secondModalIsOpen={secondModalIsOpen}
-            setSecondModalIsOpen={setSecondModalIsOpen}
             modalIsOpen={modalIsOpen}
           />
+          <ModalByUser
+            modalIsOpen2={modalIsOpen2}
+            setModalIsOpen2={setModalIsOpen2} />
         </div>
       </BrowserRouter>
     </Provider>

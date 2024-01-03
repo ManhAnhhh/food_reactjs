@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { toast } from 'react-toastify';
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
   UPDATE_CART,
   DELETE_CART,
@@ -93,9 +93,23 @@ const Cart = () => {
     const confirmed = window.confirm(
       `Are you sure you want to order items in checkout with ${totalPrice} $?`
     );
+    const users = JSON.parse(localStorage.getItem("users"));
+    const userLogin = JSON.parse(localStorage.getItem("userLogin"));
+    const cart_items = JSON.parse(localStorage.getItem("cart_items"));
     if (confirmed) {
       toast.success("Order Success");
-      confirmOrderHandler(true); // Proceed with the order
+      confirmOrderHandler(true);
+      const newUsers = users.map(item => {
+        if (item.email === userLogin.email) {
+          if (item.purchasedProduct)
+            item.purchasedProduct = item.purchasedProduct.concat(cart_items).reverse();
+          else {
+            item.purchasedProduct = cart_items;
+          }
+        }
+        return item;
+      })
+      localStorage.setItem('users', JSON.stringify(newUsers));
     }
   };
 

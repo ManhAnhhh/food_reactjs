@@ -3,7 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { toast } from 'react-toastify';
 
-const Header = ({ toggleModal, showIcon, setShowIconUser, setModalIsOpen }) => {
+const Header = ({ toggleModal, showIcon, setShowIconUser, setModalIsOpen, setModalIsOpen2 }) => {
   const totalCart = useSelector(({ Cart }) => {
     return Cart.carts.reduce((total, item) => total + item.qty, 0)
   })
@@ -43,7 +43,7 @@ const Header = ({ toggleModal, showIcon, setShowIconUser, setModalIsOpen }) => {
             <>
               <div className="user">Hello, {JSON.parse(localStorage.getItem("userLogin")).username}</div>
               <div className="icons">
-                <span><i className="fa fa-user" aria-hidden="true" /></span>
+                <span onClick={() => setModalIsOpen2(true)}><i className="fa fa-user" aria-hidden="true" /></span>
                 <Link to="/cart" className="fas fa-shopping-cart cart"><sup>{totalCart}</sup></Link>
                 <span onClick={logout}><i className="fas fa-sign-in-alt"></i></span>
               </div>

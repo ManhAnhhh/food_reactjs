@@ -1290,11 +1290,12 @@ section h1 {
 }
 
 /* style modal about */
-.modal-about {
+.modal-about,
+.modal-by-user {
   margin-top: 32px;
   padding: 16px;
   background-color: #ff9240;
-  color: #FFFFA9;
+  color: #ffffa9;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1302,7 +1303,8 @@ section h1 {
   font-size: 14px;
   border-radius: 8px;
 }
-.modal-about .modal-about-title {
+.modal-about .modal-about-title,
+.modal-by-user-title {
   text-align: center;
   font-size: 20px;
   margin: 8px 0;
@@ -1312,7 +1314,8 @@ section h1 {
   text-align: justify;
   line-height: 2;
 }
-.modal-about .modal-about-btn {
+.modal-about .modal-about-btn,
+.modal-by-user .modal-by-user-btn {
   background-color: orangered;
   border-radius: 50%;
   cursor: pointer;
@@ -1320,4 +1323,51 @@ section h1 {
   right: 10px;
   top: 10px;
   padding: 0px 5px;
+}
+.modal-by-user {
+  color: #000;
+  background-color: #eee7da !important;
+  padding: 32px;
+  position: relative;
+  overflow: scroll;
+  height: 490px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  width: 520px;
+  margin-top: 40px !important;
+}
+.modal-by-user:focus-visible {
+  outline: none;
+}
+.modal-by-user .item {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  margin: 4px;
+  background-color: #fff;
+  border-radius: 12px;
+}
+.modal-by-user .item .name {
+  color: coral;
+  font-weight: 700;
+}
+.modal-by-user .item .desc {
+  width: 230px;
+  line-height: 2.5;
+}
+.modal-by-user .item .price {
+  color: orangered;
+  margin-top: 32px;
+}
+.modal-by-user .modal-by-user-btn {
+  color: #fff !important;
+  border: 1px solid orangered;
+}
+.done {
+  border-radius: 12px;
+  padding: 16px;
+  font-size: 20px;
+  text-align: right;
+  background: #f9f7c9;
+  margin: 4px;
 }
