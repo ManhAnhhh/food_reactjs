@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import Modal from "react-modal";
 const ModalByUser = (props) => {
   const { modalIsOpen2, setModalIsOpen2 } = props;
-  const users = JSON.parse(localStorage.getItem("users"));
-  const userLogin = JSON.parse(localStorage.getItem("userLogin"));
-  const cart_items = JSON.parse(localStorage.getItem("cart_items"));
+  const users = JSON.parse(localStorage.getItem("users")) || [];
+  const userLogin = JSON.parse(localStorage.getItem("userLogin")) || [];
+  const cart_items = JSON.parse(localStorage.getItem("cart_items")) || [];
   let producsBuyUserLogin;
   users.filter((item) => {
     if (userLogin) {
